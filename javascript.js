@@ -45,6 +45,38 @@ function singleRound(player_selection, computer_selection){
     }
 }
 
-user_choice = prompt("Enter your choice: ");
-computer_choice = getComputerChoice(choices);
-console.log(singleRound(user_choice, computer_choice));
+function game(){
+    let player_score = 0;
+    let computer_score = 0;
+    for (let i = 0; i < 5; i++){
+        user_choice = prompt("Enter your choice: ");
+        computer_choice = getComputerChoice(choices);
+        let result = (singleRound(user_choice, computer_choice));
+        console.log(result);
+        if(result.includes("Win")){
+          player_score += 1;
+        } 
+        else if (result.includes("Lose")){
+          computer_score += 1;
+        }
+        else {
+          player_score += 1;
+          computer_score += 1;
+        }
+    }
+    if (player_score > computer_score){
+        return "You Win";
+    }
+    else if (player_score < computer_score){
+        return "You Lose";
+    }
+    else {
+        return "Draw";
+    }
+}
+
+// user_choice = prompt("Enter your choice: ");
+// computer_choice = getComputerChoice(choices);
+// console.log(singleRound(user_choice, computer_choice));
+
+console.log(game());
