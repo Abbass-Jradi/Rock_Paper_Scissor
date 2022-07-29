@@ -8,3 +8,7 @@ function getComputerChoice(choices){
     return choices[index];
 }
 
+user_choice = prompt("Enter your choice: ");
+
+
+
