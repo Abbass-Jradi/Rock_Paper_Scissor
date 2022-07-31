@@ -65,18 +65,20 @@ function game(){
         }
     }
     if (player_score > computer_score){
-        return "You Win";
+        return "==========\n You Win \n==========";
     }
     else if (player_score < computer_score){
-        return "You Lose";
+        return "==========\n You Lose \n==========";
     }
     else {
-        return "Draw";
+        return "==========\n Draw \n==========";
     }
 }
 
+//Single Round Mode
 // user_choice = prompt("Enter your choice: ");
 // computer_choice = getComputerChoice(choices);
 // console.log(singleRound(user_choice, computer_choice));
 
+//Multiple Rounds Mode
 console.log(game());
